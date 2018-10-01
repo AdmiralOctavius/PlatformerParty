@@ -9,7 +9,7 @@ public class Playermove : MonoBehaviour {
     public GameObject respawnPoint;
 	// Use this for initialization
 	void Start () {
-		
+        Globals.playerObject = gameObject;		
 	}
 	
 	// Update is called once per frame
@@ -39,7 +39,7 @@ public class Playermove : MonoBehaviour {
                     Rigidbody2D rb = GetComponent<Rigidbody2D>();
                     rb.velocity = new Vector2(rb.velocity.x, 0);
                     rb.AddForce(Vector2.up * jumpHeight);
-
+                    break;
                 }
 
             }

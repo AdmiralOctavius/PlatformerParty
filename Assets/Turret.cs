@@ -6,7 +6,7 @@ public class Turret : MonoBehaviour {
 
     public GameObject Bullet;
     public float fireRate = 3;
-
+    public bool useLineOfSight;
     float lastFireTime = float.MinValue;
 
     /*
@@ -29,6 +29,12 @@ public class Turret : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        GameObject player = Globals.playerObject;
+
+        Vector3 dif = player.transform.position - transform.position;
+        float angle = Mathf.Rad2Deg * Mathf.Atan2(dif.y, dif.x);
+        transform.eulerAngles = new Vector3(0, 0, angle);
 
         //Mathf.Atan2()
 	    if(Time.time - (1/fireRate) > lastFireTime)
