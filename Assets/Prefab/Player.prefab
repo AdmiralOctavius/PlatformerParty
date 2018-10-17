@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4671249665459170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,8 @@ GameObject:
   - component: {fileID: 50372374656437058}
   - component: {fileID: 70268092700217090}
   - component: {fileID: 114287159084895506}
-  m_Layer: 0
+  - component: {fileID: 95044044748162180}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +108,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2.5}
   m_Direction: 0
+--- !u!95 &95044044748162180
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360246537986178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b6ca5ceb9537d847adf841d1561efb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114287159084895506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  jumpHeight: 150
+  walkSpeed: 5
+  jumpHeight: 500
+  sprintSpeed: 15
+  respawnPoint: {fileID: 0}
 --- !u!212 &212136096595794130
 SpriteRenderer:
   m_ObjectHideFlags: 1

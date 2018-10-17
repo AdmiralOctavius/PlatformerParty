@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Playermove : MonoBehaviour {
@@ -54,7 +55,28 @@ public class Playermove : MonoBehaviour {
        
 
         rb.velocity = new Vector3(movement, rb.velocity.y, 0);
-        
+
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("GOt here");
+            //ContactFilter2D myFilter;
+            //gameObject.layer = LayerMask.NameToLayer("PlayerDrop");
+            //public LayerMask myLayer = 10;
+            //
+            //ContactFilter2D.SetLayerMask()
+            //
+            //ContactFilter2D.useLayerMask = true;
+
+            gameObject.layer = 10;
+            rb.simulated = false;
+            rb.simulated = true;
+            
+        }
+        else
+        {
+        //    gameObject.layer = 8;
+        }
 	}
 
     void Update()
