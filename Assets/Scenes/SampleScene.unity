@@ -1576,14 +1576,12 @@ Prefab:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 2100112539}
-    - target: {fileID: 1360246537986178, guid: adf8d0a681b8a714093673b7c307c07a, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1359862864270772, guid: adf8d0a681b8a714093673b7c307c07a, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
+    - target: {fileID: 114287159084895506, guid: adf8d0a681b8a714093673b7c307c07a,
+        type: 2}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 1911084139282788, guid: cd0d4758c06c61b4d9eeb4257ae66ad9,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf8d0a681b8a714093673b7c307c07a, type: 2}
   m_IsPrefabAsset: 0

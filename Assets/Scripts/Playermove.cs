@@ -10,6 +10,8 @@ public class Playermove : MonoBehaviour {
     public float jumpHeight = 100;
     public float sprintSpeed = 15;
     public GameObject respawnPoint;
+
+    public GameObject laserPrefab;
 	// Use this for initialization
 	void Start () {
         Globals.playerObject = gameObject;		
@@ -76,6 +78,20 @@ public class Playermove : MonoBehaviour {
         else
         {
         //    gameObject.layer = 8;
+        }
+
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            mousePosition.z = transform.position.z;
+
+            transform.GetChild(1).rotation = Quaternion.FromToRotation(Vector3.right, mousePosition - transform.position);
+            Quaternion rot = Quaternion.FromToRotation(Vector3.right, mousePosition - transform.position);
+
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+
+
+            Instantiate(laserPrefab, mousePosition, rot);
         }
 	}
 
